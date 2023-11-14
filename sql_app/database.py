@@ -4,12 +4,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 
-load_dotenv()
-
 DATABASE_USER = os.environ.get("DATABASE_USER")
 DATABASE_PASS = os.environ.get("DATABASE_PASS")
 DATABASE_HOST = os.environ.get("DATABASE_HOST")
-DATABASE_PORT = os.environ.get("DATABASE_PORT")
+DATABASE_PORT = os.environ.get("DATABASE_PORT", "3306")
 DATABASE_NAME = os.environ.get("DATABASE_NAME")
 
 print(DATABASE_USER)
